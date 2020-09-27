@@ -23,6 +23,7 @@ $(function () {
     $.ajax(zoomzilla_public_api + '?occasion_id=' + occasion_id + '&email=' + encodeURIComponent(email))
     .done(function (data) {
       console.log(data);
+      var registrant_id = data.id || null;
       var email = data.email;
       var allowed = data.allowed;
       var first_name = data.first_name;
@@ -70,6 +71,7 @@ $(function () {
       if (email && allowed) {
         localStorage.setItem("cfz_email", email);
         localStorage.setItem("cfz_already_logged_in", "true");
+        localStorage.setItem("cfz_registrant_id", registrant_id);
         $('[name="member[email]"]').val(member_email);
         $('[name="member[password]"]').val(member_password);
         $('[name="member[password]"]').prop('type','text');
