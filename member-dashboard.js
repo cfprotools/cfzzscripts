@@ -1,4 +1,3 @@
-<script>
 $(function () {
   var zoomzilla_public_api = 'https://cfzoomzilla.herokuapp.com/public_api/registrant';
   var email = localStorage.getItem("cfz_email") || localStorage.getItem("garlic:"+document.location.host+"*>input.email");
@@ -33,4 +32,3 @@ $(function () {
     
   });
 });
-</script>
