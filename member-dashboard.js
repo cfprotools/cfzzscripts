@@ -13,7 +13,7 @@ $(function () {
       zoomLink = "javascript:alert('Looks like there was a problem looking up your Zoom Room. Please contact the help desk.')";
       $(document).on('click', '[href="#zoomzilla-link"]', function () {
         console.log(zoomLink);
-        $(this).attr('href', zoomLink).attr('target','_blank');
+        $(this).attr('href', zoomLink).attr('target','_top');
       });
       return false;
     }
@@ -26,7 +26,7 @@ $(function () {
 
     if (zoomLink) {
       $(document).on('click', '[href="#zoomzilla-link"]', function () {
-        $(this).attr('href', zoomLink).attr('target','_top');
+        $(this).attr('href', zoomLink).attr('target','_blank');
       });
     }
     
